@@ -8,10 +8,12 @@ import * as Routes from './constants/routes';
 
 function App() {
   const location = useLocation();
+  const { action } = useHistory();
+
   const transitions = useTransition(location, {
-    from: { opacity: 0, transform: 'translate(100%,0)' },
+    from: { opacity: 0, transform: `translate(${action === 'PUSH' ? '100%' : '-50%'},0)` },
     enter: { opacity: 1, transform: 'translate(0%,0)' },
-    leave: { opacity: 0, transform: 'translate(-50%,0)' },
+    leave: { opacity: 0, transform: `translate(${action === 'PUSH' ? '-50%' : '100%'},0)` },
   });
 
   return (
