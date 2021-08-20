@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Menu } from './components/Menu';
 
 import * as Routes from './constants/routes';
 
@@ -7,6 +8,8 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Menu />
+
       <Switch>
         <Route exact path={Routes.HOME}>
           <h1>Seja bem vindo ao nosso website!</h1>
