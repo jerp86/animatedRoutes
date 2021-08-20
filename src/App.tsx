@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import { Home, Menu, Products } from './components';
+import { Home, Menu, Product, Products } from './components';
 
 import * as Routes from './constants/routes';
 
@@ -13,12 +13,8 @@ function App() {
 
       <Switch>
         <Route exact path={Routes.HOME} component={Home} />
-
         <Route exact path={Routes.PRODUCTS} component={Products} />
-
-        <Route exact path={Routes.PRODUCT}>
-          <h1>Olá, veja aqui o detalhe desse produto</h1>
-        </Route>
+        <Route exact path={Routes.PRODUCT} component={Product} />
       </Switch>
     </BrowserRouter>
   )
