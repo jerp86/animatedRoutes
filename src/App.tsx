@@ -20,6 +20,8 @@ function App() {
           <h1>Congrats</h1>
           <h2>Make good use of your purchase!</h2>
         </Route>
+
+        <Route path="*" component={() => <h1>404</h1>} />
       </Switch>
     </BrowserRouter>
   )
