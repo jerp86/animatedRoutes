@@ -1,9 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import { Home } from './components/Home';
-import { Menu } from './components/Menu';
-import { Products } from './components/Products';
+import { Home, Menu, Products } from './components';
 
 import * as Routes from './constants/routes';
 
