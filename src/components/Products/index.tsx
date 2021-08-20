@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { DATA_PRODUCTS } from '../../data/products';
+import { AbsoluteWrapper } from '../AbsoluteWrapper';
 
 export const Products = () => (
-  <div>
+  <AbsoluteWrapper>
     <h1>Olá, eu sou a página de produtos</h1>
 
     <ul>
@@ -16,5 +17,5 @@ export const Products = () => (
         </li>
       )}
     </ul>
-  </div>
+  </AbsoluteWrapper>
 );

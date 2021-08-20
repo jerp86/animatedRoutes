@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect, useHistory, useParams } from 'react-router-dom';
 import { DATA_PRODUCTS } from '../../data/products';
+import { AbsoluteWrapper } from '../AbsoluteWrapper';
 
 export const Product = () => {
   const params = useParams<{ id: string; }>();
@@ -9,7 +10,7 @@ export const Product = () => {
   const product = DATA_PRODUCTS.find(prod => prod.id === params.id);
 
   return (
-    <>
+    <AbsoluteWrapper>
       {!product && <Redirect to="/" />}
       <div>
         <h2>Olá, veja os detalhes do produto ${product?.name}</h2>
@@ -18,6 +19,6 @@ export const Product = () => {
           Comprar
         </button>
       </div>
-    </>
+    </AbsoluteWrapper>
   );
 };

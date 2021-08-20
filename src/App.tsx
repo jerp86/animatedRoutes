@@ -16,13 +16,19 @@ function App() {
         <Route exact path={Routes.PRODUCTS} component={Products} />
         <Route exact path={Routes.PRODUCT} component={Product} />
 
-        <Route exact path={Routes.BUY}>
-          <h1>Congrats</h1>
-          <h2>Make good use of your purchase!</h2>
-        </Route>
+            <Route exact path={Routes.BUY}>
+              <AbsoluteWrapper>
+                <h1>Congrats</h1>
+                <h2>Make good use of your purchase!</h2>
+              </AbsoluteWrapper>
+            </Route>
 
-        <Route path="*" component={() => <h1>404</h1>} />
-      </Switch>
+            <Route path="*" component={() => (
+              <AbsoluteWrapper>
+                <h1>404</h1>
+              </AbsoluteWrapper>
+            )} />
+          </Switch>
     </BrowserRouter>
   )
 }
